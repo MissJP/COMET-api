@@ -1,8 +1,8 @@
 # This script generagtes the database tables needed to store the COMET-Farm results table data
 # It is used with a MariaDB (MySQL) database
 
-DROP TABLE IF EXISTS cfarm_api_results.api_results_cropland;
-CREATE TABLE cfarm_api_results.api_results_cropland (
+DROP TABLE IF EXISTS test_marke.api_results_cropland;
+CREATE TABLE test_marke.api_results_cropland (
 	name varchar( 250 ),
 	id_mlra_crops_from_cdl_2009_2015 integer,
 	id_mlra_grass_from_cdl_2009_2015 integer,
@@ -39,8 +39,8 @@ CREATE TABLE cfarm_api_results.api_results_cropland (
 	INDEX ( id_mlra_grass_from_cdl_2009_2015 )
 );	
 	
-DROP TABLE IF EXISTS cfarm_api_results.api_results_livestock;
-CREATE TABLE cfarm_api_results.api_results_livestock ( 
+DROP TABLE IF EXISTS test_marke.api_results_livestock;
+CREATE TABLE test_marke.api_results_livestock ( 
 	name varchar( 250 ), 
 	fips mediumint, 
 	mlra varchar( 5 ), 
@@ -88,8 +88,8 @@ CREATE TABLE cfarm_api_results.api_results_livestock (
 	INDEX ( mlra ) 
 );
 
-DROP TABLE IF EXISTS cfarm_api_results.api_results_agroforestry;
-CREATE TABLE cfarm_api_results.api_results_agroforestry ( 
+DROP TABLE IF EXISTS test_marke.api_results_agroforestry;
+CREATE TABLE test_marke.api_results_agroforestry ( 
 	name varchar( 250 ), 
 	fips mediumint, 
 	mlra varchar( 5 ), 
@@ -109,8 +109,8 @@ CREATE TABLE cfarm_api_results.api_results_agroforestry (
 	INDEX ( mlra ) 
 );
 
-DROP TABLE IF EXISTS cfarm_api_results.api_results_forestry;
-CREATE TABLE cfarm_api_results.api_results_forestry ( 
+DROP TABLE IF EXISTS test_marke.api_results_forestry;
+CREATE TABLE test_marke.api_results_forestry ( 
 	name varchar( 250 ), 
 	fips mediumint, 
 	mlra varchar( 5 ), 
