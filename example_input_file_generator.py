@@ -1,6 +1,7 @@
 '''
 
-Mark Easter, 20 December 2017
+Mark Easter, 15 May 2020
+This example file is provided with no warranty, expressed or implied.
 
 This script builds a list of cropland API input files for the CAR N2O study.  Steps are as follows:
     1) Open an output file
@@ -31,7 +32,7 @@ if len( sys.argv ) < 1:
     exit()
 
 
-mariadb_connection = MySQLdb.connect( host='', user='', passwd='', db='' )
+mariadb_connection = MySQLdb.connect( host='<add mariadb database server name here>', user='<add mariadb username here>', passwd='<add mariadb password here>', db='<add mariadb database name here>' )
 
 tab1 = "\t"
 tab2 = "\t\t"
@@ -53,33 +54,11 @@ print "mlra42_name = " + mlra42_name
 
 '''
 run script syntax follows:
-
-#Note: the MLRAs not shown in this list don't have cropland points
-python /data/paustian/CAR/N2O2017/InputData/cropland_input_files17.py 17
-
-+--------+
-| mlra42 |
-+--------+
-|        |
-| 14     |
-| 15     |
-| 16     |
-| 17     |
-| 18     |
-| 19     |
-| 20     |
-| 21     |
-| 23     |
-| 30     |
-| 31     |
-| 5      |
-+--------+
 '''
 
-#cursor_mlras = mariadb_connection.cursor()
 total_points_per_file = 10
 
-homeDirectory = "/data/paustian/COMET-Planner/CFARM_alignment/cropland/model_run_input_files/runfolder20180211/"
+homeDirectory = "<enter home directory here>"
 os.chdir( homeDirectory )
 
 #Write the SQL query:  Build input datasets by CPS practice
@@ -99,10 +78,10 @@ number_of_points = cursor_points_count.rowcount
 cursor_points_count.close()
 
 number_of_files = int( number_of_points / total_points_per_file ) + 1
-#print "number_of_files = " + str( number_of_files )
+print "number_of_files = " + str( number_of_files )
 point_count = 0;
 
-for file_counter in range( 0, number_of_files - 1 ):
+for file_counter in range( 0, number_of_files ):
 
     if( file_counter <= number_of_files ):
 
@@ -132,7 +111,7 @@ for file_counter in range( 0, number_of_files - 1 ):
             for ( cps_id, irrigated, practice, historic_management_name, modern_management_name  ) in cursor_practices:
 
                 practice_count = practice_count + 1;
-                print "   ... File# " + str( file_counter ) + " of " + str( number_of_files - 1 ) + ", practice = [" + practice + "], irrig = [" + irrigated + "], mlra42 = " + str( mlra42_name )
+                print "   ... File# " + str( file_counter ) + " of " + str( number_of_files ) + ", practice = [" + practice + "], irrig = [" + irrigated + "], mlra42 = " + str( mlra42_name )
 
                 id_mcfc_string = ''
                 
@@ -500,9 +479,7 @@ for file_counter in range( 0, number_of_files - 1 ):
 
                                 cursor_winter_crop = mariadb_connection.cursor()
                                 cursor_winter_crop.execute( sql )
-
                                 data_crop = cursor_winter_crop.fetchone()
-
                                 cursor_winter_crop.close()
 
                                 id_planner_cropland_crops2 = data_crop[0]
@@ -557,9 +534,7 @@ for file_counter in range( 0, number_of_files - 1 ):
 
                                 cursor_summer_crop = mariadb_connection.cursor()
                                 cursor_summer_crop.execute( sql )
-
                                 data_crop = cursor_summer_crop.fetchone()
-
                                 cursor_summer_crop.close()
 
                                 #process the summer crop
@@ -991,10 +966,10 @@ for file_counter in range( 0, number_of_files - 1 ):
                                         covercrop_plant_date_str = d.strftime( '%m/%d/%Y' )
 
                                         # set the cover crop type
-                                        if practice.lower().find( 'use of a annual grass cover crop' ) > -1:
+                                        if practice.lower().find( 'use of a annual grass cover crop' ) > -1 or practice.lower().find( 'cover crops - non-leguminous' ) > -1:
                                             cfarm_cropname2 = 'RYE'
 
-                                        if practice.lower().find( 'use of a legume cover crop' ) > -1:
+                                        if practice.lower().find( 'use of a legume cover crop' ) > -1 or practice.lower().find( 'cover crops - leguminous' ) > -1:
                                             cfarm_cropname2 = 'VETCH'
 
                                         if practice.lower().find( 'use of a legume - annual grass cover crop' ) > -1:
@@ -1349,7 +1324,6 @@ for file_counter in range( 0, number_of_files - 1 ):
         print "********************************************************\n"
 
 cursor_practices.close()
-cursor_points.close()
 
 mariadb_connection.close()
     
