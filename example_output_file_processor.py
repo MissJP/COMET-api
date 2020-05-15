@@ -13,7 +13,8 @@ warnings.filterwarnings( "ignore", "Unknown table.*" )
 
 '''
 
-Mark Easter, 18 January 2017
+Mark Easter, 15 May 2020
+This example file is provided with no warranty, expressed or implied.
 
 This script opens a COMET-Farm API results file and writes the data to a database.  Steps:
     1) Open a results file
@@ -221,10 +222,6 @@ MariaDB [comet]> desc api_results_cropland_daycent_values;
 | output_value                           | varchar(20) | YES  |     | NULL    |                |
 +----------------------------------------+-------------+------+-----+---------+----------------+
 
-# Modifications 8 February 2018
-# restricted it so we aren't loading the reduced to no till converstion scenario
-# this has a different baseline scenario compared with the conventional tillage baseline scenario
-
 '''
 
 # Extract monthly output data from the DayCent variable and insert only the end-of-year value into the database
@@ -279,7 +276,10 @@ def writeEndOfYearDayCentOutput( daycent_variable, arrayText, cursor_daycent, ma
         if '.' not in array1[ y * 2 ]:
             year_value = str( int( array1[ y * 2 ] ) - 1 )
             output_value = str( array1[ ( y * 2 ) + 1 ] )
-            sql = "INSERT INTO " + str( databaseName ) + ".api_results_cropland_daycent_" + str( baselineOrScenario ) + "_" + daycent_variable + " ( id_api_results_cropland_daycent_master, date_value, output_value ) VALUE ( '" + str( id_api_results_cropland_daycent_master ) + "', '" + str( year_value ) + "', '" + str( output_value ) + "' );"
+            if daycent_variable == 'crpval':
+                sql = "INSERT INTO " + str( databaseName ) + ".api_results_cropland_daycent_" + str( baselineOrScenario ) + "_" + daycent_variable + " ( id_api_results_cropland_daycent_master, date_value, output_value ) VALUE ( '" + str( id_api_results_cropland_daycent_master ) + "', '" + str( year_value ) + "', " + str( output_value ) + " );"
+            else:
+                sql = "INSERT INTO " + str( databaseName ) + ".api_results_cropland_daycent_" + str( baselineOrScenario ) + "_" + daycent_variable + " ( id_api_results_cropland_daycent_master, date_value, output_value ) VALUE ( '" + str( id_api_results_cropland_daycent_master ) + "', '" + str( year_value ) + "', '" + str( output_value ) + "' );"
             try:
                 cursor_daycent.execute( sql )
             except mariadb_daycent.Error as error:
@@ -330,7 +330,7 @@ def main():
         print "   <fileOrDirectory> use the word 'file' to indicate the input files are in file format, 'directory' indicates intent to import a set of files in a directory "
         print "   <fileOrDirectoryName> fully-qualified path to the input file name or the directory containing the input files"
         print "   <croplandOrGrassland> use the word 'cropland' to indicate data are from a cropland system, or 'grassland' to indicate data are from a grassland system"
-        print "   <database name> name of the tusker database to which these data are to be saved"
+        print "   <database name> name of the database to which these data are to be saved"
         print ""
     
     else:
@@ -343,7 +343,7 @@ def main():
         databaseName = sys.argv[5]
 
         start = datetime.now( )
-        mariadb_connection = MySQLdb.connect( host='', user='', passwd='', db=databaseName )
+        mariadb_connection = MySQLdb.connect( host='<add database name here>', user='<add mariadb username here>', passwd='<add mariadb password here>', db=databaseName )
         cursor = mariadb_connection.cursor()
 
         print ""
@@ -389,7 +389,7 @@ def main():
         for inputFile in fileList[:]:
             fileName = ""
             print "name of inputFile = " + inputFile
-            if inputFile.find( 'DaycentReport' ) > -1:
+            if inputFile.find( 'Results' ) > -1:
 
                 if zipOrXML == 'xml':
                     fileName = inputFile
@@ -489,7 +489,7 @@ def main():
                     modelRunId = str( ModelRunNameArray[1][3:] )
 
                     #print "name = " + str( xmlAttribName )
-                    print "array element = " + str( ModelRunNameArray[1] ) + ", modelRunId = " + str( modelRunId )
+                    #print "array element = " + str( ModelRunNameArray[1] ) + ", modelRunId = " + str( modelRunId )
                     #exit()
                     
                     irrigated = str( ModelRunNameArray[2][10:] )
@@ -499,10 +499,12 @@ def main():
                     else:
                         mlra = str( ModelRunNameArray[3][5:10] )
                     
-                    print "array element = " + str( ModelRunNameArray[3] ) + ", mlra = " + str( mlra )
+                    #print "array element = " + str( ModelRunNameArray[3] ) + ", mlra = " + str( mlra )
                     
                     practice = str( ModelRunNameArray[4][9:] )
+                    print "Processing data for practice: [" + str( practice ) + "]"
                     modelRunName = xmlAttribName
+                    print "Processing data for model run name: [" + str( modelRunName ) + "]"
                     
                 elif( "from reduced" in modelRunName ):
                     # continue the loop but don't model this practice with the different baseline scenario
