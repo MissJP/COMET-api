@@ -1,5 +1,7 @@
-COMET-Farm API Example File Descriptions
-These files are provided as examples, with no warranty, either expressed or implied.
+**COMET-Farm API Example File Descriptions**
+
+*These files are provided as examples, with no warranty, either expressed or implied.*
+
 Following is a summary of files included in this dataset:
 -	API File IO Instructions.docx: Explains how to connect to and interact with the API
 -	COMET-Farm API File Description - <version>.xlsx: Explains in detail the input and output .xml file structure, including allowed values.
