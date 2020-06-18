@@ -1,0 +1,31 @@
+***************************
+Version 2.3.3, 18 June 2020
+***************************
+1. Corrected a defect in how COMET-Farm export files are read by the API. The COMET-Farm system has the capacity to export cropland projects from the project page, and send those files directly to the API. The export process was exporting the tag contents for the <Grain> tag as "True" or "False" rather than the expected "Yes" or "No". This was corrected on the API side to accept "True" or "False" in this tag.
+
+2. The COMET-Farm team corrected a defect in how indirect soil nitrous oxide emissions are simulated in the COMET-Farm API. The defect affected the nitrogen inputs when organic matter additions such as manure, compost, and organic fertilizers such as feather meal were added to the nitrogen pools driving the indirect soil nitrous oxide from volatilization and leaching. This defect has been repaired in the release made on June 18, 2020 at 4pm.
+
+This defect affected projects with organic matter additions, leading to an undercounting of indirect soil nitrous oxide emissions. Indirect soil nitrous oxide emissions are typically 3-15% of the total soil nitrous oxide emissions for a field. The N sources that drive the model include the following:
+-	synthetic fertilizer
+-	organic matter additions such as compost, manure, and organic fertilizers
+-	crop residues
+-	cycling of soil organic matter within the field
+
+Again, this defect only affected projects with organic matter additions. The COMET team estimates that the effect of this defect was that indirect soil nitrous oxide was under-counted by approximately one-quarter to one-third. The overall effect on total soil nitrous oxide (direct + indirect sources) would be that it was under-counted by approximately 1-5% for fields where organic matter additions were made, depending upon the amount of organic matter added.
+
+Projects that did not adjust nitrogen inputs from organic matter sources across scenarios would see no impact on the difference in soil nitrous oxide across fields. Said differently, the magnitude of indirect soil nitrous oxide emissions estimates would be the same for all scenarios with the same nutrient management regime, and hence there would be no different between scenarios for this subsource category.
+
+The COMET Team is introducing additional testing procedures to detect this type of problem in future releases to the tool.
+
+In addition to repairing this defect, we have removed the tags for model uncertainty in the output files as they are not currently being used. Our next major release in the API will include calculations for uncertainty.
+
+We have added three additional record tags to the API results, as follows:
+-	<SoilN2O_Direct>: Direct soil N2O emissions
+-	<SoilN2O_Indirect_Volatilization>: Indirect soil N2O emissions from volatilization
+-	<SoilN2O_Indirect_Leaching>: Indirect soil N2O emissions from leaching and runoff
+
+***************************
+Version 2.3.2, 5 June 2020
+***************************
+1. Added the capacity for users to request results to be sent via webhooks or to a URL where an http server listens for a response. The requirement to accept model run results at an email address is still available to users. Details for how to utilize this functionality are in the API I/O documentation.
+2. Added error trapping and reporting methods to capture errors in API inputs, as well as to report those errors back to users. Added improved error reporting for other error types, such as DayCent errors or model processing errors. The error trapping is described in the API I/O documentation.
