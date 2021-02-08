@@ -27,7 +27,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2000</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -55,7 +55,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2001</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -83,7 +83,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2002</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -111,7 +111,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2003</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -139,7 +139,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2004</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -167,7 +167,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2005</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -195,7 +195,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2006</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -223,7 +223,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2007</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -251,7 +251,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2008</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -279,7 +279,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2009</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -307,7 +307,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2010</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -335,7 +335,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2011</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -363,7 +363,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2012</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -391,7 +391,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2013</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -419,7 +419,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2014</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -447,7 +447,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2015</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -475,7 +475,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2016</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -503,7 +503,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/06/2017</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -528,7 +528,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2018</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -551,7 +551,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2019</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -574,7 +574,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2020</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -597,7 +597,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2021</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -622,7 +622,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2022</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -646,7 +646,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2023</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -669,7 +669,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2024</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -692,7 +692,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2025</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -717,7 +717,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2026</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
@@ -740,7 +740,7 @@
                <NApplicationList>
                   <NApplicationEvent>
                      <NApplicationDate>05/20/2027</NApplicationDate>
-                     <NApplicationType>UAN</NApplicationType>
+                     <NApplicationType>Urea Ammonium Nitrate (30-00-00)</NApplicationType>
                      <NApplicationAmount>80</NApplicationAmount>
                      <NApplicationMethod>Surface Band / Sidedress</NApplicationMethod>
                      <EEP>None</EEP>
