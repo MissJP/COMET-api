@@ -1,4 +1,40 @@
 ***************************
+Version 2.4.4, 14 May 2021
+***************************
+Updates to both the GUI and API
+
+1. Tillage updates: 
+
+- Simplified how tillage events are implemented for tillage classes (Intensive, Reduced, Mulch, Ridge, Strip, Notill) and aligned these tillage classes with how the national inventory implements tillage. Multiple tillage events were removed and replaced by the most intense tillage event in the class. The CULT W event was removed to make the tillage classes consistent with the National Inventory work. The following DayCent tillage events are implemented for each class: 
+- 	Intensive Tillage: CULT K (moldboard plow) 
+-	Reduced Tillage: CULT H (multiple passes of an offset/tandem disk, tandem/offset disk combined by chisel plow, or similar) 
+- 	Mulch Tillage: CULT F (single pass disk or similar) 
+- 	Ridge Tillage: CULT D (single pass field cultivator or similar) 
+- 	Strip Tillage: CULT C (strip tillage + planter) 
+- 	No Tillage:  CULT A (no till planter) 
+
+- This change affects projects modeled with Strip tillage and No Tillage. Strip tillage now implements a “CULT C” event, which has a somewhat heavier impact than the No Tillage “CULT A” event. Previously, both tillage classes were modeled with a “CULT W” event, which has been removed from the system. 
+
+- Aerial and Broadcast seeding were previously modeled as CULT W events, however tillage impacts have been removed from the tool so there is no net soil disturbance impact from these events. The ability to include them in the tool has been left in place and has not been deprecated. 
+
+- A code defect affecting historical tillage during the 1980-2000 period has been corrected. Projects with no tillage or reduced tillage selected for this time period would have modeled with no tillage difference compared with intensive tillage.  
+
+2. Organic Matter Additions (OMAD): A code defect that produced an unrecognized OMAD event with trailing zeroes for the DayCent model has been repaired. 
+
+3. Default NH3 fractions corrected: We corrected the default NH3 fraction in fertilizers to be the following: 
+
+- Ammonium Nitrate corrected to 0.5 
+- Calcium Ammonium Nitrate corrected to 0.5 
+- Ammonium Nitrate Phosphate (23-23-00) corrected to 0.5 
+- Ammonium Nitrate Phosphate (27-14-00) corrected to 0.5 
+- Urea Ammonium Nitrate (30-00-00) corrected to 0.75 
+- Diammonium Phosphate (18-46-00) corrected to 1.0 
+- Urea Ammonium Phosphate (27-27-00) corrected to 1.0 
+- Urea Ammonium Phosphate (34-17-00) corrected to 1.0 
+
+4. Animal Agriculture: Code defects involving allocation of manure to shared aerobic lagoons were repaired.
+
+***************************
 Version 2.3.3, 18 June 2020
 ***************************
 1. Corrected a defect in how COMET-Farm export files are read by the API. The COMET-Farm system has the capacity to export cropland projects from the project page, and send those files directly to the API. The export process was exporting the tag contents for the <Grain> tag as "True" or "False" rather than the expected "Yes" or "No". This was corrected on the API side to accept "True" or "False" in this tag.
