@@ -1,6 +1,6 @@
 **API Use Description**
 
-Use of the COMET-Farm API is restricted to Federal, state, and local government, not-for-profit, academic, and educational uses. Commercial uses are not allowed at this time. Users are generally limited to executing up to 50 model run requests per day, in order to allow for as many different users as possible to access the tool. Model run requests above this limit may be accommodated depending upon the scope of the project. Please contact Mark Easter at mark.easter@colostate.edu if you have large-scale service needs from the API above a limit of 50 model run requests per day.
+Use of the COMET-Farm API is restricted to Federal, state, and local government, not-for-profit, academic, and educational uses. Commercial uses are not allowed at this time. Users are generally limited to executing up to 50 model run requests per day, in order to allow for as many different users as possible to access the tool. Model run requests above this limit may be accommodated depending upon the scope of the project. Please contact Comet Technical Support Team at appnrel@colostate.edu if you have large-scale service needs from the API above a limit of 50 model run requests per day.
 Messages about exceeding model run request limits are sent to users at the email address provided in the webhooks post request or the COMET-Farm API GUI. Users – please monitor that email account for notifications and error messages!
 
 **COMET-Farm API Example File Descriptions**
